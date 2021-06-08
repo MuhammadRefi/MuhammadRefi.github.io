@@ -18,18 +18,18 @@
 
 		/* Track */
 		::-webkit-scrollbar-track {
-			background: rgb(44, 44, 44);
+			background: #222831;
 		}
 
 		/* Handle */
 		::-webkit-scrollbar-thumb {
-			background: #888;
+			background:#eeeeee;
 			border-radius: 25px;
 		}
 
 		/* Handle on hover */
 		::-webkit-scrollbar-thumb:hover {
-			background: #555;
+			background:#a9a9a9;
 		}
 
 		html {
@@ -37,7 +37,7 @@
 		}
 
 		body {
-			background-color: rgb(44, 44, 44);
+			background-color: #222831;
 			font-size: 12px;
 			font-family: 'Roboto', sans-serif;
 			overflow-x: hidden;
@@ -70,32 +70,32 @@
 		}
 
 		.header-list>button {
-			color: white;
+			color: #eeeeee;
 			font-size: 12px;
 			font-weight: 500;
 		}
 
 		.header-list>button:hover {
-			color: white;
+			color: #eeeeee;
 		}
 
 		.header-list.active {
-			background-color: white;
-			/* box-shadow: 0.1px 0.1px 2px black; */
+			background-color: #eeeeee;
+			/* box-shadow: 0.1px 0.1px 2px #222831; */
 		}
 
 		.header-list.active:hover {
-			background-color: rgba(255, 255, 255, 0.75);
+			background-color: #a9a9a9;
 		}
 
 		.header-list.active>button {
-			color: black;
+			color: #222831;
 			font-size: 12px;
 			font-weight: 500;
 		}
 
 		.btn {
-			color: black;
+			color: #222831;
 			font-size: 12px;
 			font-weight: 500;
 		}
@@ -112,9 +112,9 @@
 			width: 100px;
 			height: 100px;
 			margin: -75px 0 0 -75px;
-			border: 10px solid white;
+			border: 10px solid #eeeeee;
 			border-radius: 50%;
-			border-top: 10px solid silver;
+			border-top: 10px solid #a9a9a9;
 			-webkit-animation: spin 2s linear infinite;
 			-moz-animation: spin 2s linear infinite;
 			animation: spin 2s linear infinite;
@@ -155,22 +155,23 @@
 		}
 
 		.first-section {
-			background-image: url(section1.jpg);
+			/* background-image: url(section1.jpg);
 			background-position: center;
 			background-size: cover;
-			background-repeat: no-repeat;
+			background-repeat: no-repeat; */
+			background-color: #222831;
 		}
 
 		.third-section {
-			background-color: rgb(77, 77, 77);
+			background-color: #393e46;
 		}
 
 		.fourth-section {
-			background-color: rgb(44, 44, 44);
+			background-color: #222831;
 		}
 
 		.fiveth-section {
-			background-color: rgb(77, 77, 77);
+			background-color: #393e46;
 		}
 
 		.card {
@@ -190,7 +191,7 @@
 		}
 
 		.fab:hover {
-			color: orange !important;
+			color: #00adb5 !important;
 		}
 	</style>
 </head>
@@ -202,20 +203,20 @@
 			<div class="container">
 				<div class="col-lg-12">
 					<div class="d-flex align-items-center justify-content-end">
-						<div class="header-list active shadow-sm">
-							<button class="btn btn-default">HOME</button>
+						<div class="header-list active shadow-sm" id="active">
+							<button class="btn btn-default" id="nav-button1">HOME</button>
 						</div>
 						<div class="header-list">
-							<button class="btn btn-default" id="nav-button1">ABOUT</button>
+							<button class="btn btn-default" id="nav-button2">ABOUT</button>
 						</div>
 						<div class="header-list">
-							<button class="btn btn-default" id="nav-button2">SKILLS</button>
+							<button class="btn btn-default" id="nav-button3">SKILLS</button>
 						</div>
 						<div class="header-list">
-							<button class="btn btn-default" id="nav-button3">PROJECT</button>
+							<button class="btn btn-default" id="nav-button4">PROJECT</button>
 						</div>
 						<div class="header-list">
-							<button class="btn btn-default" id="nav-button4">CONTACT</button>
+							<button class="btn btn-default" id="nav-button5">CONTACT</button>
 						</div>
 					</div>
 				</div>
@@ -224,78 +225,78 @@
 		<div class="body">
 			<div class="first-section" style="height: 100vh;">
 				<div class="welcome-message d-flex justify-content-center align-items-center" style="height: 100vh;">\
-					<div style="color: white; font-size: 36px; font-weight: 500;">SELAMAT DATANG</div>
+					<div style="color: #eeeeee; font-size: 36px; font-weight: 500;">SELAMAT DATANG</div>
 				</div>
 			</div>
 			<!-- <div class="second-section" style="height: 100vh;"></div> -->
 			<div class="third-section" style="min-height: 40vh;">
 				<div class="container">
 					<div class="section-title pt-4 pb-4 text-center"
-						style="color: #f9f9f9; font-size: 24px; font-weight: 600;">SKILLS</div>
+						style="color: #eeeeee; font-size: 24px; font-weight: 600;">SKILLS</div>
 					<div class="section-content">
 						<div class="row">
 							<div class="skills-category col-lg-4 p-3">
 								<div class="row">
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-html5 text-white" style="margin-right: 10px;"></i> HTML</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-html5 text-#eeeeee" style="margin-right: 10px;"></i> HTML</div>
 									</div>
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-css3-alt text-white" style="margin-right: 10px;"></i> CSS</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-css3-alt text-#eeeeee" style="margin-right: 10px;"></i> CSS</div>
 									</div>
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-php text-white" style="margin-right: 10px;"></i> PHP</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-php text-#eeeeee" style="margin-right: 10px;"></i> PHP</div>
 									</div>
 								</div>
 								<br>
 								<div class="row">
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-bootstrap text-white" style="margin-right: 10px;"></i> BS3/BS4</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-bootstrap text-#eeeeee" style="margin-right: 10px;"></i> BS3/BS4</div>
 									</div>
 								</div>
-								<hr style="background-color: white;">
-								<div class="skill-desc text-center" style="color: white;">Web Development</div>
+								<hr style="background-color: #eeeeee;">
+								<div class="skill-desc text-center" style="color: #eeeeee;">Web Development</div>
 							</div>
 							<div class="skills-category col-lg-4 p-3">
 								<div class="row">
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> MySQL</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> MySQL</div>
 									</div>
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> SQL Server</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> SQL Server</div>
 									</div>
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> PostgreSQL</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> PostgreSQL</div>
 									</div>
 								</div>
 								<br>
 								<div class="row">
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> Firebase</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> Firebase</div>
 									</div>
 								</div>
-								<hr style="background-color: white;">
-								<div class="skill-desc text-center" style="color: white; ">Database Management</div>
+								<hr style="background-color: #eeeeee;">
+								<div class="skill-desc text-center" style="color: #eeeeee; ">Database Management</div>
 							</div>
 							<div class="skills-category col-lg-4 p-3">
 								<div class="row">
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> MySQL</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> MySQL</div>
 									</div>
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> SQL Server</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> SQL Server</div>
 									</div>
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> PostgreSQL</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> PostgreSQL</div>
 									</div>
 								</div>
 								<br>
 								<div class="row">
 									<div class="col-lg-4">
-										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> Firebase</div>
+										<div class="d-flex align-items-center text-#eeeeee" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-#eeeeee" style="margin-right: 10px;"></i> Firebase</div>
 									</div>
 								</div>
-								<hr style="background-color: white;">
-								<div class="skill-desc text-center" style="color: white;">Others</div>
+								<hr style="background-color: #eeeeee;">
+								<div class="skill-desc text-center" style="color: #eeeeee;">Others</div>
 							</div>
 						</div>
 					</div>
@@ -304,7 +305,7 @@
 			<div class="fourth-section pb-4" style="min-height: 92vh;">
 				<div class="container">
 					<div class="section-title pt-4 pb-4 text-center"
-						style="color: #f9f9f9; font-size: 24px; font-weight: 600;">PROJECT</div>
+						style="color: #eeeeee; font-size: 24px; font-weight: 600;">PROJECT</div>
 					<div class="section-content">
 						<div class="row">
 							<div class="col-lg-3">
@@ -421,15 +422,15 @@
 		</div>
 		<div class="footer" style="background-color: transparent;">
 			<div class="container">
-				<hr style="background-color: white;">
+				<hr style="background-color: #eeeeee;">
 				<div class="footer-text pb-3">
 					<div class="d-flex justify-content-between align-items-center">
 						<div style="color: #d9d9d9; font-size: 14px;">Copyright &copy; 2021. Created by Muhammad Refi</div>
 						<div>
-							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-github text-white"></i></a>
-							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-linkedin text-white"></i></a>
-							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-instagram text-white"></i></a>
-							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-twitter text-white"></i></a>							
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-github text-#eeeeee"></i></a>
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-linkedin text-#eeeeee"></i></a>
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-instagram text-#eeeeee"></i></a>
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-twitter text-#eeeeee"></i></a>							
 						</div>
 					</div>
 				</div>
@@ -473,17 +474,22 @@
 		};
 		function scrollFunction() {
 			if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-				document.getElementById("header").style.backgroundColor = "#f9f9f9";
-				document.getElementById("nav-button1").style.color = "black";
-				document.getElementById("nav-button2").style.color = "black";
-				document.getElementById("nav-button3").style.color = "black";
-				document.getElementById("nav-button4").style.color = "black";
+				document.getElementById("header").style.backgroundColor = "#eeeeee";
+				document.getElementById("active").style.backgroundColor = "#222831";
+				document.getElementById("nav-button1").style.backgroundColor = "#222831";
+				document.getElementById("nav-button1").style.color = "#eeeeee";
+				document.getElementById("nav-button2").style.color = "#222831";
+				document.getElementById("nav-button3").style.color = "#222831";
+				document.getElementById("nav-button4").style.color = "#222831";
+				document.getElementById("nav-button5").style.color = "#222831";
 			} else {
 				document.getElementById("header").style.backgroundColor = "transparent";
-				document.getElementById("nav-button1").style.color = "white";
-				document.getElementById("nav-button2").style.color = "white";
-				document.getElementById("nav-button3").style.color = "white";
-				document.getElementById("nav-button4").style.color = "white";
+				document.getElementById("nav-button1").style.backgroundColor = "#eeeeee";
+				document.getElementById("nav-button1").style.color = "#222831";
+				document.getElementById("nav-button2").style.color = "#eeeeee";
+				document.getElementById("nav-button3").style.color = "#eeeeee";
+				document.getElementById("nav-button4").style.color = "#eeeeee";
+				document.getElementById("nav-button5").style.color = "#eeeeee";
 			}
 		}
 	</script>
