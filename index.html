@@ -1,1 +1,492 @@
-Selamat Datang di Website Muhammad Refi
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<title>Muhammad Refi Website</title>
+	<style>
+		/* width */
+		::-webkit-scrollbar {
+			width: 7.5px;
+		}
+
+		/* Track */
+		::-webkit-scrollbar-track {
+			background: rgb(44, 44, 44);
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb {
+			background: #888;
+			border-radius: 25px;
+		}
+
+		/* Handle on hover */
+		::-webkit-scrollbar-thumb:hover {
+			background: #555;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			background-color: rgb(44, 44, 44);
+			font-size: 12px;
+			font-family: 'Roboto', sans-serif;
+			overflow-x: hidden;
+			scroll-behavior: smooth;
+		}
+
+		.header {
+			background-color: transparent;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+
+		.footer {
+			overflow: hidden;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.header-list {
+			border-radius: 5px;
+			padding: 2.5px;
+			margin: 0px 2.5px 0px 2.5px;
+		}
+
+		.header-list:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+
+		.header-list>button {
+			color: white;
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		.header-list>button:hover {
+			color: white;
+		}
+
+		.header-list.active {
+			background-color: white;
+			/* box-shadow: 0.1px 0.1px 2px black; */
+		}
+
+		.header-list.active:hover {
+			background-color: rgba(255, 255, 255, 0.75);
+		}
+
+		.header-list.active>button {
+			color: black;
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		.btn {
+			color: black;
+			font-size: 12px;
+			font-weight: 500;
+		}
+
+		.btn:focus {
+			box-shadow: none !important;
+		}
+
+		#loader {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 1;
+			width: 100px;
+			height: 100px;
+			margin: -75px 0 0 -75px;
+			border: 10px solid white;
+			border-radius: 50%;
+			border-top: 10px solid silver;
+			-webkit-animation: spin 2s linear infinite;
+			-moz-animation: spin 2s linear infinite;
+			animation: spin 2s linear infinite;
+		}
+
+		@-webkit-keyframes spin {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		@-moz-keyframes spin {
+			0% {
+				-moz-transform: rotate(0deg);
+			}
+
+			100% {
+				-moz-transform: rotate(360deg);
+			}
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		#content {
+			display: none;
+		}
+
+		.first-section {
+			background-image: url(section1.jpg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.third-section {
+			background-color: rgb(77, 77, 77);
+		}
+
+		.fourth-section {
+			background-color: rgb(44, 44, 44);
+		}
+
+		.fiveth-section {
+			background-color: rgb(77, 77, 77);
+		}
+
+		.card {
+			transition: all .5s ease-in-out;
+		}
+
+		.card:hover {
+			transform: scale(1.05);
+		}
+
+		.skills-category > .skill-desc {
+			transition: all .2s ease-in-out;
+		}
+
+		.skills-category:hover > .skill-desc {
+			font-size: 15px;
+		}
+
+		.fab:hover {
+			color: orange !important;
+		}
+	</style>
+</head>
+
+<body onload="customPreloader()">
+	<div id="loader"></div>
+	<div id="content" class="animate__animated animate__fadeIn">
+		<div class="header pt-1 pb-1" id="header">
+			<div class="container">
+				<div class="col-lg-12">
+					<div class="d-flex align-items-center justify-content-end">
+						<div class="header-list active shadow-sm">
+							<button class="btn btn-default">HOME</button>
+						</div>
+						<div class="header-list">
+							<button class="btn btn-default" id="nav-button1">ABOUT</button>
+						</div>
+						<div class="header-list">
+							<button class="btn btn-default" id="nav-button2">SKILLS</button>
+						</div>
+						<div class="header-list">
+							<button class="btn btn-default" id="nav-button3">PROJECT</button>
+						</div>
+						<div class="header-list">
+							<button class="btn btn-default" id="nav-button4">CONTACT</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="first-section" style="height: 100vh;">
+				<div class="welcome-message d-flex justify-content-center align-items-center" style="height: 100vh;">\
+					<div style="color: white; font-size: 36px; font-weight: 500;">SELAMAT DATANG</div>
+				</div>
+			</div>
+			<!-- <div class="second-section" style="height: 100vh;"></div> -->
+			<div class="third-section" style="min-height: 40vh;">
+				<div class="container">
+					<div class="section-title pt-4 pb-4 text-center"
+						style="color: #f9f9f9; font-size: 24px; font-weight: 600;">SKILLS</div>
+					<div class="section-content">
+						<div class="row">
+							<div class="skills-category col-lg-4 p-3">
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-html5 text-white" style="margin-right: 10px;"></i> HTML</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-css3-alt text-white" style="margin-right: 10px;"></i> CSS</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-php text-white" style="margin-right: 10px;"></i> PHP</div>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa-bootstrap text-white" style="margin-right: 10px;"></i> BS3/BS4</div>
+									</div>
+								</div>
+								<hr style="background-color: white;">
+								<div class="skill-desc text-center" style="color: white;">Web Development</div>
+							</div>
+							<div class="skills-category col-lg-4 p-3">
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> MySQL</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> SQL Server</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> PostgreSQL</div>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> Firebase</div>
+									</div>
+								</div>
+								<hr style="background-color: white;">
+								<div class="skill-desc text-center" style="color: white; ">Database Management</div>
+							</div>
+							<div class="skills-category col-lg-4 p-3">
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> MySQL</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> SQL Server</div>
+									</div>
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> PostgreSQL</div>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="d-flex align-items-center text-white" style="font-size: 13px; font-weight: 600;"><i class="fab fa-4x fa- text-white" style="margin-right: 10px;"></i> Firebase</div>
+									</div>
+								</div>
+								<hr style="background-color: white;">
+								<div class="skill-desc text-center" style="color: white;">Others</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fourth-section pb-4" style="min-height: 92vh;">
+				<div class="container">
+					<div class="section-title pt-4 pb-4 text-center"
+						style="color: #f9f9f9; font-size: 24px; font-weight: 600;">PROJECT</div>
+					<div class="section-content">
+						<div class="row">
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="card" style="height: 335px; border-radius: 15px;">
+									<div class="card-body text-center">
+										<img class="img-fluid" src="1.png" style="width: 400px;" alt="">
+										<br><br>
+										<div style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing
+											elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+											ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+											commodo consequat.</div>
+										<div class="pt-3"><a href="" class="btn btn-primary">SHOW</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer" style="background-color: transparent;">
+			<div class="container">
+				<hr style="background-color: white;">
+				<div class="footer-text pb-3">
+					<div class="d-flex justify-content-between align-items-center">
+						<div style="color: #d9d9d9; font-size: 14px;">Copyright &copy; 2021. Created by Muhammad Refi</div>
+						<div>
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-github text-white"></i></a>
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-linkedin text-white"></i></a>
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-instagram text-white"></i></a>
+							<a class="brands" href="" style="margin: 0px 2.5px 0px 2.5px;"><i class="fab fa-2x fa-twitter text-white"></i></a>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script> -->
+	<script>
+		// $("html").niceScroll();
+	</script>
+	<script>
+		function customPreloader() {
+			var myVar;
+			myVar = setTimeout(showPage, 1500);
+		}
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("content").style.display = "block";
+		}
+	</script>
+	<script>
+		if (history.scrollRestoration) {
+			history.scrollRestoration = 'manual';
+		} else {
+			window.onbeforeunload = function () {
+				window.scrollTo(0, 0);
+			}
+		}
+	</script>
+	<script>
+		window.onbeforeunload = function () {
+			window.scrollTo(0, 0);
+		}
+	</script>
+	<script>
+		window.onscroll = function () {
+			scrollFunction()
+		};
+		function scrollFunction() {
+			if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+				document.getElementById("header").style.backgroundColor = "#f9f9f9";
+				document.getElementById("nav-button1").style.color = "black";
+				document.getElementById("nav-button2").style.color = "black";
+				document.getElementById("nav-button3").style.color = "black";
+				document.getElementById("nav-button4").style.color = "black";
+			} else {
+				document.getElementById("header").style.backgroundColor = "transparent";
+				document.getElementById("nav-button1").style.color = "white";
+				document.getElementById("nav-button2").style.color = "white";
+				document.getElementById("nav-button3").style.color = "white";
+				document.getElementById("nav-button4").style.color = "white";
+			}
+		}
+	</script>
+</body>
+
+</html>
